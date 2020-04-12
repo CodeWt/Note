@@ -14,6 +14,9 @@ $ git add readme.txt
 $ git add file1.txt
 $ git add file2.txt file3.txt
 $ git commit -m "add 3 files."
+
+要随时掌握工作区的状态，使用git status命令。
+如果git status告诉你有文件被修改过，用git diff可以查看修改内容。
 ```
 >时光机穿梭（版本回退，改变  HEAD 指针位置从而改变当前的版本）
 ```aidl
@@ -33,7 +36,7 @@ $ git reflog
 ```
 >管理修改
 ```aidl
-git diff HEAD -- readme.txt命令可以查看工作区和版本库里面最新版本的区别
+git diff HEAD -- readme.txt     命令可以查看工作区和版本库里面最新版本的区别
 ```
 >git管理文件
 ```aidl
@@ -73,4 +76,6 @@ $ git rm test.txt
 $ git commit -m "remove test.txt"
 
 $ git checkout -- test.txt
+
+注意：从来没有被添加到版本库就被删除的文件，是无法恢复的！
 ```
