@@ -1,7 +1,7 @@
 >多人协作
 ```aidl
 当你从远程仓库克隆时，实际上Git自动把本地的master分支和远程的master分支对应起来了，并且，远程仓库的默认名称是origin。
-要查看远程库的信息，用git remote：
+要查看远程库的信息，用git remote
 
 $ git remote
 
