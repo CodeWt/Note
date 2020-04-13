@@ -57,14 +57,6 @@ awk '{print $1}' file.log | sort -nr | uniq -c | head -n 10
 网络带宽大小查看(nethogs)
 时间复杂度、空间复杂度
 ```
->2020.4.10
-```aidl
-1.error和exception差异
-runtime exeception 和 checked exception(编译时异常)都有那些
-2.事务的隔离级别
-3.@resource与@autowired区别
-4.checked exception & unchecked exception
-5.iterator,foreach那个快
-6.不同的xml文件的id可以相同吗
-7.正向代理和反向代理
-```
+
+
+
