@@ -47,7 +47,9 @@ Git管理的文件分为：工作区，版本库，版本库又分为暂存区st
 git add把文件从工作区>>>>暂存区
 
 git commit把文件从暂存区>>>>仓库，
-
+```
+>git diff
+```aidl
 git diff查看工作区和暂存区差异，
 
 git diff --cached查看暂存区和仓库差异，
@@ -55,6 +57,7 @@ git diff --cached查看暂存区和仓库差异，
 git diff HEAD 查看工作区和仓库的差异，
 
 git checkout 撤销工作区修改
+```
 
 ```
 >撤销修改
