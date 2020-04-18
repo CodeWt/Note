@@ -78,4 +78,5 @@ $ git commit -m "remove test.txt"
 $ git checkout -- test.txt
 
 注意：从来没有被添加到版本库就被删除的文件，是无法恢复的！
+
 ```
