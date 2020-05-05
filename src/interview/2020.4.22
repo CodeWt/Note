@@ -1,0 +1,20 @@
+>
+```aidl
+1.spring,springMVC,Springboot,SpringCloud
+2.Hibernate,Mybatis
+3.Netty,MQ,Dubbo,Zookeeper
+4.redis,Mongo等Nosql
+5.svn,Tomcat,Apache,Nginx
+6.PD(product design)建模工具,RP(Axure RP)等工具进行页面原型设计
+```
+```aidl
+Hibernate,mybatis
+redis
+Netty
+mq 解耦,异步,削峰(秒杀,抢购)
+rpc
+```
+>spring,springmvc,springboot关系
+```aidl
+
+```

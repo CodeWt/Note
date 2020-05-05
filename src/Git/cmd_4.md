@@ -58,6 +58,7 @@ git push origin :refs/tags/<tagname>可以删除一个远程标签
 忽略你自己的带有敏感信息的配置文件，比如存放口令的配置文件。
 
 4.https://github.com/github/gitignore
+  https://www.jianshu.com/p/1c74f84e56b4
 
 $ git add -f App.class
 $ git check-ignore -v App.class
