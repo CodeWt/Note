@@ -1,0 +1,52 @@
+###Exception in thread "main" java.lang.RuntimeException: don't run elasticsearch as root.
+>1.创建elsearch用户组及elsearch用户
+```aidl
+groupadd elsearch
+useradd elsearch -g elsearch -p elasticsearch
+``` 
+>2.更改elasticsearch文件夹及内部文件的所属用户及组为elsearch:elsearch
+ ```
+cd /opt
+chown -R elsearch:elsearch  elasticsearch 
+```
+>3.切换到elsearch用户再启动
+```aidl
+su elsearch 
+cd elasticsearch/bin/
+./elasticsearch
+```
+###max file descriptors [65535] for elasticsearch process is too low
+###(elasticsearch用户拥有的可创建文件描述的权限太低，至少需要65536）
+>1.切换到root用户,修改/etc/security/limits.conf
+```aidl
+vim /etc/security/limits.conf
+```
+>2.在最后面追加下面内容
+```aidl
+elsearch hard nofile 65536
+elsearch soft nofile 65536
+```
+### max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+### elasticsearch用户拥有的内存权限太小，至少需要262144
+>1.切换到root用户
+```aidl
+sysctl -w vm.max_map_count=262144
+```
+>2.查看结果：
+```aidl
+sysctl -a|grep vm.max_map_count
+```
+>3.显示：
+```aidl
+vm.max_map_count = 262144
+```
+>4.上述方法修改之后，如果重启虚拟机将失效，所以：
+```aidl
+解决办法：
+在/etc/sysctl.conf文件最后添加一行
+vm.max_map_count=262144
+即可永久修改
+```
+   
+
+
