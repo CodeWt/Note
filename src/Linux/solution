@@ -1,0 +1,11 @@
+>Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)
+>Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
+```
+sudo rm /var/cache/apt/archives/lock
+sudo rm /var/lib/dpkg/lock
+
+如果还无法解决，报错：dpkg was interrupted, you must manually run 'sudo dpkg --configure -a' to correct the problem. 
+
+再输入： sudo dpkg --configure -a
+
+``` 
